@@ -1,4 +1,4 @@
-from . import config, online_dictionary
+from . import config, dictionary
 
 # import the main window object (mw) from aqt
 from aqt import mw
@@ -39,7 +39,7 @@ def on_deck_selected(deck_name, deck_id, card_count):
             showInfo(f"Note {note_id} in deck {deck_name} does not have the required fields.")
             return
         kanji_word = note[config.source_field]
-        kanji_info = online_dictionary.search_word(kanji_word)
+        kanji_info = dictionary.search_word(kanji_word)
         if kanji_info is None:
             #showInfo(f"No kanji information found for '{kanji_word}'")
             continue
