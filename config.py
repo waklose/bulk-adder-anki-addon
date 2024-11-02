@@ -17,3 +17,8 @@ target_field = config_data['target_field']
 dict_file_path = os.path.join(current_dir, 'kanji_dictionary.json')
 dict_data = read_json(dict_file_path)
 full_kanji_dictionary = {entry[0]: entry for entry in dict_data}
+
+dict_file_path_2 = os.path.join(current_dir, 'kanji_dictionary_2.json')
+dict_data_2 = read_json(dict_file_path_2)
+for i in dict_data_2:
+    full_kanji_dictionary[i[0]] = i

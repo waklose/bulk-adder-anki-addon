@@ -55,7 +55,11 @@ def search_word(word, online = False):
             kanji_dict = {}
             kanji_dict["kanji"] = kanji
 
-            kanji_dict["meaning"] = ", ".join(config.full_kanji_dictionary[kanji][4])
+            try:
+                kanji_dict["meaning"] = ", ".join(config.full_kanji_dictionary[kanji][4])
+            except:
+                print(kanji.encode('utf-8'))
+                continue
             kanji_dict["kunyomi"] = config.full_kanji_dictionary[kanji][2].replace(" ", "、")
             kanji_dict["onyomi"] = config.full_kanji_dictionary[kanji][1].replace(" ", "、")
             try:
