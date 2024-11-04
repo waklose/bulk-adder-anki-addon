@@ -1,6 +1,6 @@
 # Bulk Adder
 
-This repo is created as a way to add information to all cards in an anki deck. It could also be used to postprocess the cards or download information from the cards. The current functionality adds information about all kanji used in a word. This information is added in the JSON format to a specified field and requires adding the following code to the card (probably the backside of the card):
+This repo is created as a way to add information to all cards in an anki deck. It could also be used to postprocess the cards or download information from the cards. The current functionality adds information about all kanji used in a word. This information is added in the JSON format to a specified field and requires adding the following code to the card:
 ```
 <div id="kanji-container"></div>
 
