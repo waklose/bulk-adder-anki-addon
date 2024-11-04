@@ -49,7 +49,7 @@ def search_word(word, online = False):
             except:
                 kanji_dict["jlpt"] = ""
             list_of_kanji_dict.append(kanji_dict)
-    else:
+    else: # offline
         list_of_kanji_dict = []
         for kanji in kanji_in_word(word):
             kanji_dict = {}
@@ -66,6 +66,10 @@ def search_word(word, online = False):
                 kanji_dict["jlpt"] = config.full_kanji_dictionary[kanji][5]["jlpt"]
             except:
                 kanji_dict["jlpt"] = ""
+            try: 
+                kanji_dict["rtk"] = config.full_kanji_dictionary[kanji][5]["heisig6"]
+            except:
+                kanji_dict["rtk"] = ""
 
             list_of_kanji_dict.append(kanji_dict)
         
