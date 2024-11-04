@@ -1,7 +1,7 @@
 # Bulk Adder
 
 This repo is created as a way to add information to all cards in an anki deck. It could also be used to postprocess the cards or download information from the cards. The current functionality adds information about all kanji used in a word. This information is added in the JSON format to a specified field and requires adding the following code to the card (probably the backside of the card):
-`
+```
 <div id="kanji-container"></div>
 
 <script>
@@ -39,10 +39,10 @@ This repo is created as a way to add information to all cards in an anki deck. I
         kanjiContainer.appendChild(kanjiBlock);
     });
 </script>
-`
+```
 
 and the following code to the styling of the card:
-`
+```
 #kanji-container {
     display: flex;
     gap: 15px;
@@ -103,7 +103,8 @@ and the following code to the styling of the card:
 .kanji-details span{
 		color: cyan
 }
-`
+```
 
 An example output of the code is given below. This block would be added to your anki card.
+
 ![Image example](example_image.png)
