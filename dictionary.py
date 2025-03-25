@@ -75,6 +75,3 @@ def search_word(word, online = False):
         
 
     return json.dumps(list_of_kanji_dict, ensure_ascii=False)
-
-
-print(search_word("漢字"))
